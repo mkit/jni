@@ -127,8 +127,9 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.1810767486" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.21803917" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
 								<option id="gnu.cpp.link.option.paths.1058294833" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zzEmbeding/libs}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zzEmbeding}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\bin&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\lib&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.1994658760" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcmdenvd"/>

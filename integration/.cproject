@@ -106,7 +106,8 @@
 							<tool command="g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug.1500302484" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug">
 								<option defaultValue="true" id="gnu.cpp.link.mingw.so.debug.option.shared.1520669720" name="Shared (-shared)" superClass="gnu.cpp.link.mingw.so.debug.option.shared" valueType="boolean"/>
 								<option id="gnu.cpp.link.option.paths.698742811" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration/libs}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\bin&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\lib&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.1130430970" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppenvird"/>
@@ -196,7 +197,7 @@
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include\platdep&quot;"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.preprocessor.def.211607993" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+								<option id="gnu.cpp.compiler.option.preprocessor.def.211607993" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="MAKEDLL"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1471016186" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -223,7 +224,7 @@
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\utils&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include\platdep&quot;"/>
 								</option>
-								<option id="gnu.c.compiler.option.preprocessor.def.symbols.620103802" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.620103802" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="MAKEDLL"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1190424955" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -237,6 +238,7 @@
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\lib\gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration/libs}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\bin&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.839067002" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;D:\Programs\OMNeT++\lib\liboppcmdenv.a&quot;"/>
