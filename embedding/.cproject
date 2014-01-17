@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.2099833011">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.2099833011" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.exe.debug.2099833011" name="Debug" parent="cdt.managedbuild.config.gnu.mingw.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.2099833011." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.debug.354431237" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.debug">
+							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.debug.82691880" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.debug"/>
+							<builder buildPath="${workspace_loc:/zzEmbeding}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.240636286" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Release"/>
+								</outputEntries>
+							</builder>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.1042714704" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug">
+								<option id="gnu.both.asm.option.include.paths.1057060793" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/include"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/include/platdep"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/cmdenv"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/envir"/>
+									<listOptionValue builtIn="false" value="../zzEmbeding/zzEmbeding/model"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/ethernet/switch"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/ethernet"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/queue"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/base"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/contract"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/common"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/eventlog"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/layout"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/nedxml"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/scave"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/sim/netbuilder"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/sim/parsim"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/sim"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/tkenv"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/ui"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/utils"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/msys/include"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/msys/include/tcl8.4"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/msys/include/libxml"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include\win32&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1937685709" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.808212339" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1663473761" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug">
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level.1006112676" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.1393272268" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.1926026242" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/include"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/include/platdep"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/cmdenv"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/envir"/>
+									<listOptionValue builtIn="false" value="../zzEmbeding/zzEmbeding/model"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/ethernet/switch"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/ethernet"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/queue"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/base"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/contract"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/common"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/eventlog"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/layout"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/nedxml"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/scave"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/sim/netbuilder"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/sim/parsim"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/sim"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/tkenv"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/ui"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/utils"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/msys/include"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/msys/include/tcl8.4"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/msys/include/libxml"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include\win32&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.206344566" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="MAKEDLL"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.724925291" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1621863673" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug">
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.exe.debug.option.optimization.level.2026736765" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.debug.option.optimization.level" valueType="enumerated"/>
+								<option id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.1901560876" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.1912688551" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/include"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/include/platdep"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/cmdenv"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/envir"/>
+									<listOptionValue builtIn="false" value="../zzEmbeding/zzEmbeding/model"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/ethernet/switch"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/ethernet"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/queue"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/base"/>
+									<listOptionValue builtIn="false" value="D:/Workspaces/OMNeT++/Workspace/inet/src/linklayer/contract"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/common"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/eventlog"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/layout"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/nedxml"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/scave"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/sim/netbuilder"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/sim/parsim"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/sim"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/tkenv"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/ui"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/src/utils"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/msys/include"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/msys/include/tcl8.4"/>
+									<listOptionValue builtIn="false" value="D:/Programs/OMNeT++/msys/include/libxml"/>
+								</option>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1871568554" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1227206036" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.1810767486" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.21803917" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
+								<option id="gnu.cpp.link.option.paths.1058294833" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zzEmbeding/libs}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zzEmbeding}&quot;"/>
+								</option>
+								<option id="gnu.cpp.link.option.libs.1994658760" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcmdenvd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcommond"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppenvird"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppeventlogd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="opplayoutd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppnedxmld"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppscaved"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppsimd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="opptkenvd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppmaind"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1903640472" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="omnet/src/sim|omnet/src/envir|omnet/src/common|omnet/src/scave|omnet/src/ui|omnet/src/tkenv|omnet/src/layout|omnet/src/eventlog|omnet/src/nedxml|model|omnet/src/cmdenv|omnet/src/utils|omnet" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="model"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.release.680333178">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.release.680333178" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.exe.release.680333178" name="Release" parent="cdt.managedbuild.config.gnu.mingw.exe.release">
+					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.release.680333178." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.release.2067437325" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.release">
+							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.release.1156719936" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.release"/>
+							<builder buildPath="${workspace_loc:/zzEmbeding}/Release" id="cdt.managedbuild.tool.gnu.builder.mingw.base.85650884" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.release.80566253" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.release">
+								<option id="gnu.both.asm.option.include.paths.1593703497" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include\platdep&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\cmdenv&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\envir&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zzEmbeding/model}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\eventlog&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\layout&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\nedxml&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\scave&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\sim\netbuilder&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\sim\parsim&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\sim&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\tkenv&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\ui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\utils&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\msys\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\msys\include\tcl8.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\msys\include\libxml&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include\win32&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1316185422" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.1383444658" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.1779834465" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release">
+								<option id="gnu.cpp.compiler.mingw.exe.release.option.optimization.level.1449531461" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.release.option.debugging.level.1128971378" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.2092868949" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include\platdep&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\cmdenv&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\envir&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zzEmbeding/model}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\eventlog&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\layout&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\nedxml&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\scave&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\sim\netbuilder&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\sim\parsim&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\sim&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\tkenv&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\ui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\utils&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\msys\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\msys\include\tcl8.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\msys\include\libxml&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include\win32&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1791292432" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="MAKE"/>
+									<listOptionValue builtIn="false" value="MAKEDLL"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.181716357" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.747583511" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.mingw.exe.release.option.optimization.level.1057598821" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.release.option.optimization.level" valueType="enumerated"/>
+								<option id="gnu.c.compiler.mingw.exe.release.option.debugging.level.1321688273" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.900062169" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include\platdep&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\cmdenv&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\envir&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zzEmbeding/model}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\eventlog&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\layout&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\nedxml&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\scave&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\sim\netbuilder&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\sim\parsim&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\sim&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\tkenv&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\ui&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\src\utils&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\msys\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\msys\include\tcl8.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\msys\include\libxml&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Java\jdk7\include\win32&quot;"/>
+								</option>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.682396275" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="MAKE"/>
+									<listOptionValue builtIn="false" value="MAKEDLL"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.638302009" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.release.1810643768" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.release"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release.1329680346" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release">
+								<option id="gnu.cpp.link.option.paths.765084048" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zzEmbeding}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\bin&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/zzEmbeding/libs}&quot;"/>
+								</option>
+								<option id="gnu.cpp.link.option.libs.515820714" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppenvir"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppeventlog"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="opplayout"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppmain"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppsim"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="opptkenv"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcommon"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcmdenv"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="inet"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppsimd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcmdenvd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcommond"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppenvird"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppeventlogd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="opplayoutd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppnedxmld"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppscaved"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="opptkenvd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppmaind"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="inetd"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="integration"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.2067702524" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="zzEmbeding.cdt.managedbuild.target.gnu.mingw.exe.688177150" name="Executable" projectType="cdt.managedbuild.target.gnu.mingw.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.2099833011;cdt.managedbuild.config.gnu.mingw.exe.debug.2099833011.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.1663473761;cdt.managedbuild.tool.gnu.cpp.compiler.input.724925291">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.680333178;cdt.managedbuild.config.gnu.mingw.exe.release.680333178.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.1779834465;cdt.managedbuild.tool.gnu.cpp.compiler.input.181716357">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.release.680333178;cdt.managedbuild.config.gnu.mingw.exe.release.680333178.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.747583511;cdt.managedbuild.tool.gnu.c.compiler.input.638302009">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.exe.debug.2099833011;cdt.managedbuild.config.gnu.mingw.exe.debug.2099833011.;cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1621863673;cdt.managedbuild.tool.gnu.c.compiler.input.1227206036">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/zzEmbeding"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/zzEmbeding"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+</cproject>
