@@ -19,8 +19,8 @@ Both model and integration require appropriate includes, which are OMnet++\inclu
 
 In order to run the test project you need JRE-32 bit version and you also need to specify an additional argument for library searching paths:
 
--Djava.library.path="${project_loc};C:\Windows\System32;D:\Programs\OMNeT++\bin;D:\Workspaces\OMNeT++\Workspace\inet\out\gcc-debug\src"
+'-Djava.library.path="${project_loc};C:\Windows\System32"'
 
-Moreover you need both dlls (libmodel.dll and libintegration.dll) in the application directory (test).
+Moreover you need both dlls (libmodel.dll and libintegration.dll) in the application directory (test) together with the aforementioned *d.dll libraries (from OMNet++\bin) directory and inet.dll.
 
 The embedding (exe project requires) all the aforementioned libraries (plus libmodel.dll and libintegration.dll) to be present in the application root directory. Additionally in order to run it you need to export the simulation method from the integration/simulation.cpp file and used that compiled version. To do that put the "extern "C" __declspec(dllexport)" before the simulate method.
