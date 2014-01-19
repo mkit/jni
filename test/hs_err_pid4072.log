@@ -1,0 +1,238 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 100 bytes for CHeapObj-new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:58), pid=4072, tid=6596
+#
+# JRE version: 7.0_13-b20
+# Java VM: Java HotSpot(TM) Client VM (23.7-b01 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x333c2c00):  VMThread [stack: 0x07860000,0x078b0000] [id=6596]
+
+Stack: [0x07860000,0x078b0000],  sp=0x078af3c0,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x16f261]
+V  [jvm.dll+0x169535]
+V  [jvm.dll+0x5e769]
+V  [jvm.dll+0x8358f]
+V  [jvm.dll+0x9c548]
+V  [jvm.dll+0x127799]
+V  [jvm.dll+0x127a82]
+V  [jvm.dll+0x14715b]
+V  [jvm.dll+0x145ba1]
+V  [jvm.dll+0x71460]
+V  [jvm.dll+0x6b42f]
+V  [jvm.dll+0x6d2bf]
+V  [jvm.dll+0x6d770]
+V  [jvm.dll+0x6c297]
+V  [+0x73ae3]
+V  [jvm.dll+0x6ae72]
+V  [jvm.dll+0x6b25e]
+V  [jvm.dll+0x17740c]
+V  [jvm.dll+0x14f475]
+V  [jvm.dll+0x14e5de]
+V  [jvm.dll+0x14e967]
+V  [jvm.dll+0x14ee32]
+V  [jvm.dll+0x17ee89]
+C  [msvcr100.dll+0x5c6de]  endthreadex+0x3a
+C  [msvcr100.dll+0x5c788]  endthreadex+0xe4
+C  [vfbasics.dll+0x16b1d]
+C  [KERNEL32.dll+0x2850d]
+C  [+0x5bf39]  RtlInitializeExceptionChain+0x85
+C  [ntdll.dll+0x5bf0c]  RtlInitializeExceptionChain+0x58
+
+JavaThread 0x3390ec00 (nid = 6408) was being processed
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.Object.wait(J)V+0
+j  java.lang.ref.ReferenceQueue.remove(J)Ljava/lang/ref/Reference;+44
+j  java.lang.ref.ReferenceQueue.remove()Ljava/lang/ref/Reference;+2
+j  java.lang.ref.Finalizer$FinalizerThread.run()V+3
+v  ~StubRoutines::call_stub
+VM_Operation (0x0651fa14): GenCollectFull, mode: safepoint, requested by thread 0x0b49cc00
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x35bb8c00 JavaThread "Service Thread" daemon [_thread_blocked, id=6792, stack(0x35d30000,0x35d80000)]
+  0x35a4ac00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=6480, stack(0x35ca0000,0x35cf0000)]
+  0x35a0ac00 JavaThread "Attach Listener" daemon [_thread_blocked, id=6260, stack(0x35b10000,0x35b60000)]
+  0x3544ec00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6528, stack(0x35a80000,0x35ad0000)]
+  0x3390ec00 JavaThread "Finalizer" daemon [_thread_blocked, id=6408, stack(0x0abb0000,0x0ac00000)]
+  0x338fcc00 JavaThread "Reference Handler" daemon [_thread_blocked, id=6560, stack(0x0a4b0000,0x0a500000)]
+  0x0b49cc00 JavaThread "main" [_thread_blocked, id=5300, stack(0x064d0000,0x06520000)]
+
+Other Threads:
+=>0x333c2c00 VMThread [stack: 0x07860000,0x078b0000] [id=6596]
+  0x3511cc00 WatcherThread [stack: 0x35ec0000,0x35f10000] [id=6992]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0b3fcfa0] OopMapCacheAlloc_lock - owner thread: 0x333c2c00
+[0x0b42afa0] Threads_lock - owner thread: 0x333c2c00
+[0x0b43efa0] Heap_lock - owner thread: 0x0b49cc00
+
+Heap
+ def new generation   total 39296K, used 698K [0x0d890000, 0x10330000, 0x18330000)
+  eden space 34944K,   2% used [0x0d890000, 0x0d93ebf8, 0x0fab0000)
+  from space 4352K,   0% used [0x0fab0000, 0x0fab0000, 0x0fef0000)
+  to   space 4352K,   0% used [0x0fef0000, 0x0fef0000, 0x10330000)
+ tenured generation   total 87424K, used 0K [0x18330000, 0x1d890000, 0x2d890000)
+   the space 87424K,   0% used [0x18330000, 0x18330000, 0x18330200, 0x1d890000)
+ compacting perm gen  total 12288K, used 1748K [0x2d890000, 0x2e490000, 0x31890000)
+   the space 12288K,  14% used [0x2d890000, 0x2da450f8, 0x2da45200, 0x2e490000)
+No shared spaces configured.
+
+Card table byte_map: [0x31890000,0x319c0000] byte_map_base: 0x31823b80
+
+Polling page: 0x00e50000
+
+Code Cache  [0x0b890000, 0x0b928000, 0x0d890000)
+ total_blobs=139 nmethods=9 adapters=66 free_code_cache=32183Kb largest_free_block=32956096
+
+Compilation events (10 events):
+Event: 0.339 Thread 0x35a4ac00    5             java.lang.String::equals (81 bytes)
+Event: 0.339 Thread 0x35a4ac00 nmethod 5 0x0b920c08 code [0x0b920d20, 0x0b920ec0]
+Event: 0.339 Thread 0x35a4ac00    6             java.lang.String::lastIndexOf (52 bytes)
+Event: 0.340 Thread 0x35a4ac00 nmethod 6 0x0b9210c8 code [0x0b9211d0, 0x0b9212dc]
+Event: 0.341 Thread 0x35a4ac00    7             java.lang.Object::<init> (1 bytes)
+Event: 0.341 Thread 0x35a4ac00 nmethod 7 0x0b9213c8 code [0x0b9214c0, 0x0b921550]
+Event: 0.358 Thread 0x35a4ac00    8             java.lang.CharacterData::of (120 bytes)
+Event: 0.358 Thread 0x35a4ac00 nmethod 8 0x0b921848 code [0x0b921980, 0x0b921ce0]
+Event: 0.358 Thread 0x35a4ac00    9             java.lang.CharacterDataLatin1::getProperties (11 bytes)
+Event: 0.358 Thread 0x35a4ac00 nmethod 9 0x0b921f08 code [0x0b922000, 0x0b9220a0]
+
+GC Heap History (1 events):
+Event: 1.903 GC heap before
+{Heap before GC invocations=0 (full 0):
+ def new generation   total 39296K, used 698K [0x0d890000, 0x10330000, 0x18330000)
+  eden space 34944K,   2% used [0x0d890000, 0x0d93ebf8, 0x0fab0000)
+  from space 4352K,   0% used [0x0fab0000, 0x0fab0000, 0x0fef0000)
+  to   space 4352K,   0% used [0x0fef0000, 0x0fef0000, 0x10330000)
+ tenured generation   total 87424K, used 0K [0x18330000, 0x1d890000, 0x2d890000)
+   the space 87424K,   0% used [0x18330000, 0x18330000, 0x18330200, 0x1d890000)
+ compacting perm gen  total 12288K, used 1748K [0x2d890000, 0x2e490000, 0x31890000)
+   the space 12288K,  14% used [0x2d890000, 0x2da450f8, 0x2da45200, 0x2e490000)
+No shared spaces configured.
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (3 events):
+Event: 0.124 Thread 0x0b49cc00 Threw 0x0d896060 at C:\jdk7u2_32P\jdk7u13_2932_new\hotspot\src\share\vm\prims\jni.cpp:3994
+Event: 0.309 Thread 0x0b49cc00 Threw 0x0d8dba48 at C:\jdk7u2_32P\jdk7u13_2932_new\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 0.333 Thread 0x0b49cc00 Threw 0x0d8e08c0 at C:\jdk7u2_32P\jdk7u13_2932_new\hotspot\src\share\vm\prims\jvm.cpp:1166
+
+Events (10 events):
+Event: 0.356 loading class 0x36536fc8 done
+Event: 0.356 loading class 0x36a78fd8
+Event: 0.356 loading class 0x36aa4fd8
+Event: 0.356 loading class 0x36aa4fd8 done
+Event: 0.356 loading class 0x36a78fd8 done
+Event: 0.357 loading class 0x369affc8
+Event: 0.357 loading class 0x369affc8 done
+Event: 0.359 loading class 0x32862fd8
+Event: 0.359 loading class 0x32862fd8 done
+Event: 1.903 Executing VM operation: GenCollectFull
+
+
+Dynamic libraries:
+0x00e80000 - 0x00eaf000 	C:\Program Files (x86)\Java\jdk7\bin\javaw.exe
+0x77c50000 - 0x77da7000 	C:\Windows\SYSTEM32\ntdll.dll
+0x736e0000 - 0x73749000 	C:\Windows\syswow64\verifier.dll
+0x6ffe0000 - 0x7000f000 	C:\Windows\SYSTEM32\vrfcore.dll
+0x6ff80000 - 0x6ffda000 	C:\Windows\SYSTEM32\vfbasics.dll
+0x6ff60000 - 0x6ff75000 	C:\Windows\SYSTEM32\vfcompat.dll
+0x77a60000 - 0x77b90000 	C:\Windows\SYSTEM32\KERNEL32.dll
+0x75c40000 - 0x75d56000 	C:\Windows\SYSTEM32\USER32.dll
+0x775e0000 - 0x77686000 	C:\Windows\SYSTEM32\KERNELBASE.dll
+0x75a20000 - 0x75b1d000 	C:\Windows\SYSTEM32\GDI32.dll
+0x73c80000 - 0x73c8a000 	C:\Windows\SYSTEM32\vfntlmless.dll
+0x6ff20000 - 0x6ff5d000 	C:\Windows\SYSTEM32\vfluapriv.dll
+0x76f70000 - 0x76f76000 	C:\Windows\SYSTEM32\PSAPI.DLL
+0x75970000 - 0x75a1e000 	C:\Windows\SYSTEM32\ADVAPI32.dll
+0x77890000 - 0x779a9000 	C:\Windows\SYSTEM32\ole32.dll
+0x74f80000 - 0x74f88000 	C:\Windows\SYSTEM32\VERSION.dll
+0x75b20000 - 0x75bd1000 	C:\Windows\SYSTEM32\msvcrt.dll
+0x77a20000 - 0x77a54000 	C:\Windows\SYSTEM32\sechost.dll
+0x75680000 - 0x7572c000 	C:\Windows\SYSTEM32\RPCRT4.dll
+0x77690000 - 0x777c6000 	C:\Windows\SYSTEM32\combase.dll
+0x75280000 - 0x7529c000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x75270000 - 0x75279000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x75210000 - 0x75261000 	C:\Windows\SYSTEM32\bcryptPrimitives.dll
+0x6fed0000 - 0x6ff1b000 	C:\Windows\SYSTEM32\vfprint.dll
+0x6feb0000 - 0x6fec3000 	C:\Windows\SYSTEM32\vfnet.dll
+0x6fe90000 - 0x6fea7000 	C:\Windows\SYSTEM32\vfnws.dll
+0x68730000 - 0x68d67000 	C:\Windows\SYSTEM32\vfcuzz.dll
+0x755d0000 - 0x755f0000 	C:\Windows\system32\IMM32.DLL
+0x754f0000 - 0x755ce000 	C:\Windows\SYSTEM32\MSCTF.dll
+0x73440000 - 0x73638000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9200.16579_none_8937eec6860750f5\COMCTL32.dll
+0x73350000 - 0x73376000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x6fdd0000 - 0x6fe8e000 	C:\Program Files (x86)\Java\jdk7\jre\bin\msvcr100.dll
+0x6fa80000 - 0x6fdcd000 	C:\Program Files (x86)\Java\jdk7\jre\bin\client\jvm.dll
+0x74f90000 - 0x74f98000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x740a0000 - 0x740c1000 	C:\Windows\SYSTEM32\WINMM.dll
+0x752a0000 - 0x752f0000 	C:\Windows\SYSTEM32\WS2_32.dll
+0x73410000 - 0x7343b000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x777d0000 - 0x777d8000 	C:\Windows\SYSTEM32\NSI.dll
+0x779b0000 - 0x779f6000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x775c0000 - 0x775de000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x6fa70000 - 0x6fa7c000 	C:\Program Files (x86)\Java\jdk7\jre\bin\verify.dll
+0x6fa50000 - 0x6fa70000 	C:\Program Files (x86)\Java\jdk7\jre\bin\java.dll
+0x6fa30000 - 0x6fa43000 	C:\Program Files (x86)\Java\jdk7\jre\bin\zip.dll
+0x66f40000 - 0x66f55000 	D:\GitHub\jni\test\libintegration.dll
+0x6b740000 - 0x6b78f000 	D:\GitHub\jni\test\liboppcommon.dll
+0x6e500000 - 0x6e5a2000 	D:\GitHub\jni\test\liboppenvir.dll
+0x65140000 - 0x652cd000 	D:\GitHub\jni\test\liboppsim.dll
+0x6e940000 - 0x6e964000 	D:\GitHub\jni\test\libgcc_s_dw2-1.dll
+0x36c10000 - 0x36d11000 	D:\GitHub\jni\test\libstdc++-6.dll
+0x65d40000 - 0x65e06000 	D:\GitHub\jni\test\liboppnedxml.dll
+0x63c00000 - 0x63c24000 	D:\GitHub\jni\test\libmodel.dll
+0x38220000 - 0x3895b000 	D:\GitHub\jni\test\libinet.dll
+0x73100000 - 0x73229000 	C:\Windows\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Djava.library.path=D:\GitHub\jni\test\;C:\Windows\System32\; -Xms128M -Xmx512M -Dfile.encoding=Cp1252 
+java_command: JNITest
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk7
+PATH=D:\Programs\MinGW\bin;D:\Programs\Python\;D:\Programs\Perl\site\bin;D:\Programs\Perl\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;D:\Programs\Ant\bin;D:\Programs\Maven\bin;D:\Programs\jacORB\bin;D:\Programs\JavaCC\bin;D:\Programs\SlikSvn\bin;C:\Programs\TortoiseSVN\bin;D:\Programs\omniORB\bin\x86_win32;D:\Programs\Make\bin;D:\Programs\Groovy\bin;D:\Programs\Scala\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;d:\Programs\MiKTeX\miktex\bin\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\
+USERNAME=Michal
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 8.4 Build 10200 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 4072340k(1191512k free), swap 8266644k(4600732k free)
+
+vm_info: Java HotSpot(TM) Client VM (23.7-b01) for windows-x86 JRE (1.7.0_13-b20), built on Jan 30 2013 10:03:58 by "java_re" with unknown MS VC++:1600
+
+time: Sun Jan 19 12:23:10 2014
+elapsed time: 2 seconds
+

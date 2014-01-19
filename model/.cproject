@@ -1,95 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
-		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.so.debug.1331953472">
-			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.so.debug.1331953472" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.so.debug.1371199555">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.so.debug.1371199555" moduleId="org.eclipse.cdt.core.settings" name="Debug">
 				<externalSettings>
 					<externalSetting>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/ModelDLL"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/ModelDLL/Debug"/>
-						<entry flags="RESOLVED" kind="libraryFile" name="model" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/CrossModel"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/CrossModel/Debug"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="CrossModel" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
 				</externalSettings>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="dll" artifactName="model" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.sharedLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.sharedLib" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.so.debug.1331953472" name="Debug" parent="cdt.managedbuild.config.gnu.mingw.so.debug">
-					<folderInfo id="cdt.managedbuild.config.gnu.mingw.so.debug.1331953472." name="/" resourcePath="">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.so.debug.679537410" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.so.debug">
-							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.so.debug.1265082730" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.so.debug"/>
-							<builder buildPath="${workspace_loc:/ModelDLL}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.176659548" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base">
-								<outputEntries>
-									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
-									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Release"/>
-								</outputEntries>
-							</builder>
-							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.so.debug.1756787723" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.so.debug">
-								<option id="gnu.both.asm.option.include.paths.1335494809" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+				<configuration artifactExtension="so" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.sharedLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.sharedLib" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.so.debug.1371199555" name="Debug" parent="cdt.managedbuild.config.gnu.cross.so.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.so.debug.1371199555." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.so.debug.578804449" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.so.debug">
+							<option id="cdt.managedbuild.option.gnu.cross.path.2133987749" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="D:\Programs\OMNeT++\mingw\bin" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1225578219" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/CrossModel}/Debug" id="cdt.managedbuild.builder.gnu.cross.2054431097" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.1303800519" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.1795028726" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.789873634" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.821544179" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CrossIntegration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
 								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1383337203" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1860487811" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.733016218" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.debug.1284189761" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.debug">
-								<option id="gnu.cpp.compiler.mingw.so.debug.option.optimization.level.1419885574" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.so.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.mingw.so.debug.option.debugging.level.2000946864" name="Debug Level" superClass="gnu.cpp.compiler.mingw.so.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.option.include.paths.823702237" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.152327894" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.2092144573" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.751386125" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.1872192696" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CrossIntegration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
 								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1920738649" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1828375727" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.so.debug.518021680" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.so.debug">
-								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.so.debug.option.optimization.level.1324788350" name="Optimization Level" superClass="gnu.c.compiler.mingw.so.debug.option.optimization.level" valueType="enumerated"/>
-								<option id="gnu.c.compiler.mingw.so.debug.option.debugging.level.1749590217" name="Debug Level" superClass="gnu.c.compiler.mingw.so.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.include.paths.1162415704" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1551074915" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker">
+								<option defaultValue="true" id="gnu.c.link.option.shared.1185786932" name="Shared (-shared)" superClass="gnu.c.link.option.shared" valueType="boolean"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.507800614" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+								<option defaultValue="true" id="gnu.cpp.link.option.shared.579654200" name="Shared (-shared)" superClass="gnu.cpp.link.option.shared" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.paths.1060147836" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/test}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CrossIntegration}&quot;"/>
 								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2010652109" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
-							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.so.debug.588715669" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.so.debug">
-								<option defaultValue="true" id="gnu.c.link.mingw.so.debug.option.shared.262624233" name="Shared (-shared)" superClass="gnu.c.link.mingw.so.debug.option.shared" valueType="boolean"/>
-							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug.453924422" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug">
-								<option defaultValue="true" id="gnu.cpp.link.mingw.so.debug.option.shared.540838711" name="Shared (-shared)" superClass="gnu.cpp.link.mingw.so.debug.option.shared" valueType="boolean"/>
-								<option id="gnu.cpp.link.option.paths.1164934982" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\bin&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\out\gcc-debug\src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\lib&quot;"/>
-								</option>
-								<option id="gnu.cpp.link.option.libs.1319396352" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+								<option id="gnu.cpp.link.option.libs.1832199335" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="inet"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcmdenvd"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppenvird"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="opplayoutd"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppsimd"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppnedxmld"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppmaind"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcommond"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppsim"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="integration"/>
 								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1045183824" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.694527213" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
 								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.931462645" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.340162765" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<option id="gnu.both.asm.option.include.paths.1314267092" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CrossIntegration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1050950082" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
 					</folderInfo>
@@ -101,90 +99,91 @@
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
-		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.so.release.1638551505">
-			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.so.release.1638551505" moduleId="org.eclipse.cdt.core.settings" name="Release">
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.so.release.529558565">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.so.release.529558565" moduleId="org.eclipse.cdt.core.settings" name="Release">
 				<externalSettings>
 					<externalSetting>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/ModelDLL"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/ModelDLL/Release"/>
-						<entry flags="RESOLVED" kind="libraryFile" name="ModelDLL" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/CrossModel"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/CrossModel/Release"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="model" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
 				</externalSettings>
 				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="dll" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.sharedLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.sharedLib" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.so.release.1638551505" name="Release" parent="cdt.managedbuild.config.gnu.mingw.so.release">
-					<folderInfo id="cdt.managedbuild.config.gnu.mingw.so.release.1638551505." name="/" resourcePath="">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.so.release.1151116146" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.so.release">
-							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.so.release.519670104" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.so.release"/>
-							<builder buildPath="${workspace_loc:/ModelDLL}/Release" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1556953133" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
-							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.so.release.1581932405" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.so.release">
-								<option id="gnu.both.asm.option.include.paths.1907745988" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+				<configuration artifactExtension="dll" artifactName="model" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.sharedLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.sharedLib" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.so.release.529558565" name="Release" parent="cdt.managedbuild.config.gnu.cross.so.release">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.so.release.529558565." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.so.release.1395920717" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.so.release">
+							<option id="cdt.managedbuild.option.gnu.cross.path.1355967479" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="D:\Programs\OMNeT++\mingw\bin" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.816092469" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/CrossModel}/Release" id="cdt.managedbuild.builder.gnu.cross.181188199" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.876553706" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.1408320905" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.423187938" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.20879580" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CrossIntegration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
 								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1361418890" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2136622668" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.309070107" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.release.2145697829" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.release">
-								<option id="gnu.cpp.compiler.mingw.so.release.option.optimization.level.318757831" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.so.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.mingw.so.release.option.debugging.level.1038483585" name="Debug Level" superClass="gnu.cpp.compiler.mingw.so.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.option.include.paths.1424310592" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.140380278" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.122820661" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.1649267951" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.2101538139" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CrossIntegration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
 								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.111007742" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.932682151" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.so.release.1120237445" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.so.release">
-								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.mingw.so.release.option.optimization.level.362440567" name="Optimization Level" superClass="gnu.c.compiler.mingw.so.release.option.optimization.level" valueType="enumerated"/>
-								<option id="gnu.c.compiler.mingw.so.release.option.debugging.level.115681025" name="Debug Level" superClass="gnu.c.compiler.mingw.so.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.include.paths.734648732" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1495956767" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker">
+								<option defaultValue="true" id="gnu.c.link.option.shared.584462606" name="Shared (-shared)" superClass="gnu.c.link.option.shared" valueType="boolean"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.817809552" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+								<option defaultValue="true" id="gnu.cpp.link.option.shared.1513981280" name="Shared (-shared)" superClass="gnu.cpp.link.option.shared" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.paths.1126051040" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/test}&quot;"/>
 								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1371587044" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
-							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.so.release.1590428096" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.so.release">
-								<option defaultValue="true" id="gnu.c.link.mingw.so.release.option.shared.846044352" name="Shared (-shared)" superClass="gnu.c.link.mingw.so.release.option.shared" valueType="boolean"/>
-							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.release.1811784799" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.release">
-								<option defaultValue="true" id="gnu.cpp.link.mingw.so.release.option.shared.1753091788" name="Shared (-shared)" superClass="gnu.cpp.link.mingw.so.release.option.shared" valueType="boolean"/>
-								<option id="gnu.cpp.link.option.paths.1639383627" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\bin&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\out\gcc-debug\src&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\lib&quot;"/>
-								</option>
-								<option id="gnu.cpp.link.option.libs.1978397015" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+								<option id="gnu.cpp.link.option.libs.102174395" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="inet"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcmdenv"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppenvir"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="opplayout"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppsim"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppnedxml"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppmain"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="oppcommon"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="integration"/>
 								</option>
-								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.593838652" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1634973295" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
 								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.134586867" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.513585637" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<option id="gnu.both.asm.option.include.paths.1025046591" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;D:\Programs\OMNeT++\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet\switch&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\ethernet&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\queue&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\linklayer\contract&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Workspaces\OMNeT++\Workspace\inet\src\base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/integration}&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1213931178" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
 					</folderInfo>
@@ -194,30 +193,24 @@
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="ModelDLL.cdt.managedbuild.target.gnu.mingw.so.706981086" name="Shared Library" projectType="cdt.managedbuild.target.gnu.mingw.so"/>
+		<project id="CrossModel.cdt.managedbuild.target.gnu.cross.so.980737066" name="Shared Library" projectType="cdt.managedbuild.target.gnu.cross.so"/>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.so.debug.1331953472;cdt.managedbuild.config.gnu.mingw.so.debug.1331953472.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.debug.1284189761;cdt.managedbuild.tool.gnu.cpp.compiler.input.1920738649">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.so.release.529558565;cdt.managedbuild.config.gnu.cross.so.release.529558565.;cdt.managedbuild.tool.gnu.cross.cpp.compiler.140380278;cdt.managedbuild.tool.gnu.cpp.compiler.input.932682151">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.so.release.1638551505;cdt.managedbuild.config.gnu.mingw.so.release.1638551505.;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.release.2145697829;cdt.managedbuild.tool.gnu.cpp.compiler.input.111007742">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.so.debug.1371199555;cdt.managedbuild.config.gnu.cross.so.debug.1371199555.;cdt.managedbuild.tool.gnu.cross.cpp.compiler.152327894;cdt.managedbuild.tool.gnu.cpp.compiler.input.1828375727">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.so.release.1638551505;cdt.managedbuild.config.gnu.mingw.so.release.1638551505.;cdt.managedbuild.tool.gnu.c.compiler.mingw.so.release.1120237445;cdt.managedbuild.tool.gnu.c.compiler.input.1371587044">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.so.debug.1371199555;cdt.managedbuild.config.gnu.cross.so.debug.1371199555.;cdt.managedbuild.tool.gnu.cross.c.compiler.1303800519;cdt.managedbuild.tool.gnu.c.compiler.input.1860487811">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.mingw.so.debug.1331953472;cdt.managedbuild.config.gnu.mingw.so.debug.1331953472.;cdt.managedbuild.tool.gnu.c.compiler.mingw.so.debug.518021680;cdt.managedbuild.tool.gnu.c.compiler.input.2010652109">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.so.release.529558565;cdt.managedbuild.config.gnu.cross.so.release.529558565.;cdt.managedbuild.tool.gnu.cross.c.compiler.876553706;cdt.managedbuild.tool.gnu.c.compiler.input.2136622668">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope" versionNumber="2">
-		<configuration configurationName="Release">
-			<resource resourceType="PROJECT" workspacePath="/ModelDLL"/>
-		</configuration>
-		<configuration configurationName="Debug">
-			<resource resourceType="PROJECT" workspacePath="/ModelDLL"/>
-		</configuration>
-	</storageModule>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

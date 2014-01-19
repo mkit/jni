@@ -4,6 +4,11 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <vector>
+#include <algorithm>
+
+#include "jDEECoModule.h"
+
 #include "opp_ctype.h"
 #include "args.h"
 #include "distrib.h"
@@ -25,8 +30,21 @@ Register_GlobalConfigOption(CFGID_LOAD_LIBS, "load-libs", CFG_FILENAMES, "", "A 
 Register_GlobalConfigOption(CFGID_CONFIGURATION_CLASS, "configuration-class", CFG_STRING, "", "Part of the Envir plugin mechanism: selects the class from which all configuration information will be obtained. This option lets you replace omnetpp.ini with some other implementation, e.g. database input. The simulation program still has to bootstrap from an omnetpp.ini (which contains the configuration-class setting). The class should implement the cConfigurationEx interface.");
 Register_GlobalConfigOption(CFGID_USER_INTERFACE, "user-interface", CFG_STRING, "", "Selects the user interface to be started. Possible values are Cmdenv and Tkenv. This option is normally left empty, as it is more convenient to specify the user interface via a command-line option or the IDE's Run and Debug dialogs. New user interfaces can be defined by subclassing cRunnableEnvir.");
 
-//std::vector<jDEECoRuntime *> jDEECoRuntimes;
-//std::vector<jDEECoModule *> jDEECoModules;
+class jDEECoRuntime {
+public:
+	void *host;
+	void *env;
+	const char * id;
+
+	jDEECoRuntime(void *host, void *env, const char *id) {
+		this->env = env;
+		this->host = host;
+		this->id = id;
+	}
+};
+
+std::vector<jDEECoRuntime *> jDEECoRuntimes;
+std::vector<jDEECoModule *> jDEECoModules;
 
 // helper macro
 #define CREATE_BY_CLASSNAME(var,classname,baseclass,description) \
@@ -58,7 +76,7 @@ static void verifyIntTypes()
 #undef LL
 }
 
-void simulate(std::string envName = "Cmdenv")
+void simulate(const char * envName)
 {
 	cStaticFlag dummy;
 	//
@@ -136,24 +154,24 @@ void simulate(std::string envName = "Cmdenv")
         // Choose and set up user interface (EnvirBase subclass). Everything else
         // will be done by the user interface class.
         //
-        std::string appname = envName;
-        if (appname.empty())
-        	std::string appname = configobject->getAsString(CFGID_USER_INTERFACE);
+        const char * appname = envName;
+        if (appname == NULL || opp_strcmp(appname, "") == 0)
+        	appname = configobject->getAsString(CFGID_USER_INTERFACE).c_str();
         cOmnetAppRegistration *appreg = NULL;
-        if (!appname.empty())
+        if (!(appname == NULL || opp_strcmp(appname, "") == 0))
         {
         	// look up specified user interface
-            appreg = static_cast<cOmnetAppRegistration *>(omnetapps.getInstance()->lookup(appname.c_str()));
+            appreg = static_cast<cOmnetAppRegistration *>(omnetapps.getInstance()->lookup(appname));
             if (!appreg)
             {
             	::printf("\n"
                 	"User interface '%s' not found (not linked in or loaded dynamically).\n"
-                    "Available ones are:\n", appname.c_str());
+                    "Available ones are:\n", appname);
                 cRegistrationList *a = omnetapps.getInstance();
                 for (int i=0; i<a->size(); i++)
                 	::printf("  %s : %s\n", a->get(i)->getName(), a->get(i)->info().c_str());
 
-                throw cRuntimeError("Could not start user interface '%s'", appname.c_str());
+                throw cRuntimeError("Could not start user interface '%s'", appname);
             }
         }
         else
@@ -217,6 +235,10 @@ void simulate(std::string envName = "Cmdenv")
     cSimulation::clearLoadedNedFiles();
 }
 
+JNIEXPORT jint JNICALL _JNI_OnLoad(JavaVM *vm, void *reserved) {
+	return JNI_VERSION_1_6;
+}
+
 JNIEXPORT jdouble JNICALL _Java_cz_cuni_mff_d3s_deeco_simulation_Simulation_getCurrentTime(JNIEnv *env, jobject jsimulation) {
 	if (cSimulation::getActiveSimulation() == NULL)
 		return -1;
@@ -225,33 +247,62 @@ JNIEXPORT jdouble JNICALL _Java_cz_cuni_mff_d3s_deeco_simulation_Simulation_getC
 }
 
 JNIEXPORT void JNICALL _Java_cz_cuni_mff_d3s_deeco_simulation_Simulation_initializeHost(JNIEnv *env, jobject jsimulation, jobject object, jstring id) {
-//	const char * cstring = env->GetStringUTFChars(id,0);
-//	for (std::vector<jDEECoRuntime *>::iterator it = jDEECoRuntimes.begin(); it != jDEECoRuntimes.end(); ++it) {
-//		if (opp_strcmp((*it)->id, cstring) == 0) {
-//			return;
-//		}
-//	}
-//	jDEECoRuntimes.push_back(new jDEECoRuntime(&object, env, cstring));
+	const char * cstring = env->GetStringUTFChars(id,0);
+	for (std::vector<jDEECoRuntime *>::iterator it = jDEECoRuntimes.begin(); it != jDEECoRuntimes.end(); ++it) {
+		if (opp_strcmp((*it)->id, cstring) == 0) {
+			return;
+		}
+	}
+	jDEECoRuntimes.push_back(new jDEECoRuntime(&object, env, cstring));
 }
 
 JNIEXPORT void JNICALL _Java_cz_cuni_mff_d3s_deeco_simulation_Simulation_broadcastPacket(JNIEnv *env, jobject jsimulation, jstring id, jbyteArray packet) {
-//	const char * cstring = env->GetStringUTFChars(id,0);
-//	for (std::vector<jDEECoModule *>::iterator it = jDEECoModules.begin(); it != jDEECoModules.end(); ++it) {
-//		if (opp_strcmp((*it)->getModuleId(), cstring) == 0) {
-//			int length = env->GetArrayLength(packet);
-//		    unsigned char* buffer = new unsigned char[length];
-//		    env->GetByteArrayRegion(packet, 0, length, reinterpret_cast<jbyte*>(buffer));
-//		    (*it)->broadcastPacket(buffer);
-//		    break;
-//		 }
-//	}
-//	env->ReleaseStringUTFChars(id, cstring);
+	const char * cstring = env->GetStringUTFChars(id,0);
+	for (std::vector<jDEECoModule *>::iterator it = jDEECoModules.begin(); it != jDEECoModules.end(); ++it) {
+		if (opp_strcmp((*it)->jDEECoGetModuleId(), cstring) == 0) {
+			int length = env->GetArrayLength(packet);
+		    unsigned char* buffer = new unsigned char[length];
+		    env->GetByteArrayRegion(packet, 0, length, reinterpret_cast<jbyte*>(buffer));
+		    (*it)->jDEECoBroadcastPacket(buffer);
+		    break;
+		 }
+	}
+	env->ReleaseStringUTFChars(id, cstring);
 }
 
 JNIEXPORT void JNICALL _Java_cz_cuni_mff_d3s_deeco_simulation_Simulation_run(JNIEnv *env, jobject jsimulation, jstring environment) {
 	const char * cEnv = env->GetStringUTFChars(environment,0);
 	simulate(cEnv);
-//	jDEECoModules.clear();
-//	jDEECoRuntimes.clear();
-//	env->ReleaseStringUTFChars(environment, cEnv);
+	jDEECoModules.clear();
+	jDEECoRuntimes.clear();
+	env->ReleaseStringUTFChars(environment, cEnv);
+}
+
+DLLEXPORT void packetReceived(unsigned char * data, void * module) {
+	jDEECoModule *jModule = (jDEECoModule *) module;
+	if (jModule->env != NULL && jModule->host != NULL) {
+		jclass cls = ((JNIEnv *) jModule->env)->GetObjectClass(*((jobject *) jModule->host));
+		jmethodID mid = ((JNIEnv *) jModule->env)->GetMethodID(cls, "packetReceived", "(I)V");
+		if (mid == 0)
+			return;
+		jbyteArray packet = ((JNIEnv *) jModule->env)->NewByteArray(sizeof(data));
+		((JNIEnv *) jModule->env)->SetByteArrayRegion(packet, 0, sizeof(data), (jbyte*)data);
+		((JNIEnv *) jModule->env)->CallVoidMethod(*((jobject *) jModule->host), mid, packet);
+	}
+}
+
+DLLEXPORT void registerModule(void * module) {
+	jDEECoModule *jModule = (jDEECoModule *) module;
+	printf("Initializing jDEECo module: %s\n", jModule->jDEECoGetModuleId());
+	if(std::find(jDEECoModules.begin(), jDEECoModules.end(), jModule) == jDEECoModules.end()) {
+		for (std::vector<jDEECoRuntime *>::iterator it = jDEECoRuntimes.begin(); it != jDEECoRuntimes.end(); ++it) {
+			if (opp_strcmp((*it)->id, jModule->jDEECoGetModuleId()) == 0) {
+				jModule->host = (*it)->host;
+				jModule->env = (*it)->env;
+				jDEECoModules.push_back(jModule);
+				printf("Module registered\n");
+				break;
+			}
+		}
+	}
 }

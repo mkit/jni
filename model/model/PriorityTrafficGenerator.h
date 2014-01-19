@@ -25,10 +25,12 @@
 #include <sstream>
 #include <iterator>
 
+#include "jDEECoModule.h"
+
 /**
  * TODO - Generated class
  */
-class PriorityTrafficGenerator : public cSimpleModule
+class PriorityTrafficGenerator : public cSimpleModule, public jDEECoModule
 {
 protected:
   static simtime_t *globalMaxResponseTimes;
@@ -83,6 +85,11 @@ protected:
 
   virtual void reconnect();
   virtual void sendSinglePacket(const char *msgName, short priority, simtime_t timestamp = -1.0);
+
+  //Needs to be implemented by the module
+  virtual const char * jDEECoGetModuleId();
+  //Needs to be implemented by the module
+  virtual void jDEECoBroadcastPacket(unsigned char * data);
 };
 
 #endif

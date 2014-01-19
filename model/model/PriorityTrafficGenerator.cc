@@ -33,6 +33,14 @@ PriorityTrafficGenerator::~PriorityTrafficGenerator() {
     cancelAndDelete(timerMsg);
 }
 
+const char * PriorityTrafficGenerator::jDEECoGetModuleId() {
+    return getName();
+}
+
+void PriorityTrafficGenerator::jDEECoBroadcastPacket(unsigned char * data)  {
+    //TODO
+}
+
 void PriorityTrafficGenerator::initialize(int stage) {
     // we can only initialize in the 2nd stage (stage==1), because
     // assignment of "auto" MAC addresses takes place in stage 0
@@ -105,6 +113,8 @@ void PriorityTrafficGenerator::initialize(int stage) {
             }
         }
         }
+    	//jDEECo Initialization
+    	jDEECoInitialize();
     }
 
 MACAddress PriorityTrafficGenerator::resolveDestMACAddress() {
@@ -260,7 +270,6 @@ void PriorityTrafficGenerator::receivePacket(cPacket *msg) {
                 }
             }
         }
-        delete token;
     } else if (responseDelay->doubleValue() >= 0) {
         EV<< "Not found" << endl;
         char msgname[40];
@@ -273,7 +282,7 @@ void PriorityTrafficGenerator::receivePacket(cPacket *msg) {
     packetsReceived++;
     //emit(rcvdPkSignal, msg);
     if (!scheduled)
-        delete msg;
+        dropAndDelete(msg);
 }
 
 void PriorityTrafficGenerator::finish() {
